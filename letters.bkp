@@ -1,0 +1,26 @@
+
+<script>
+   let deg = 6;
+   for (let i = 1; i <= 20; i++) {
+      let div = document.getElementsByClassName("letter")[i];
+      div.style.transform = 'rotate(' + deg + 'deg)';
+      deg = deg + 6;
+   }
+</script>
+
+<style type=text/css>
+   .l1M {transform: translate(-20px,40px) rotate(-30deg);}
+   .l2A {transform: translate(-15px,10px) rotate(-25deg);}
+   .l3K {transform: translate(  0px, 0px) rotate(  0deg);}
+   .l4N {transform: translate( 15px,10px) rotate( 25deg);}
+   .l5A {transform: translate( 20px,40px) rotate( 30deg);}
+   span {display: inline-block;}
+</style>
+
+
+
+            <span class="letter">M</span>
+            <span class="letter">A</span>
+            <span class="letter">K</span>
+            <span class="letter">N</span>
+            <span class="letter">A</span>

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Permanent+Marker&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	vertical-align: baseline;
+	font-size: 100%;
+	font-family: 'Fredoka One', cursive;
+	color: #FFD0F9;
+
+	list-style: none;
+}
+
+*::selection {
+	background-color: #EBACDA;
+	color: #6b4c64;
+}
+
+body {
+   width: 100vw;
+   height: 100vh;
+   background: url(../images/banner.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+/* ##### CONTEÚDO ##### */
+
+.mainOptions {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	background-color: #00000073;
+}
+
+.mainOptions h1{
+	font-family: 'Permanent Marker', cursive;
+	font-size: 60pt;
+	color: #FFD0F9;
+}
+
+.mainOptions h3{
+	font-size: 22pt;
+}
+
+.mainOptions h3 span{
+	font-size: 40pt;
+}
+
+/* ##### MENU ##### */
+
+.mainMenu {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	display: flex;
+	align-items: flex-end;
+	bottom: 0;
+}
+
+.mainMenu::before {
+	content: '';
+	height: 50px;
+	width: 100%;
+	background-image: linear-gradient(transparent,rgba(0, 0, 0, 0.541));
+	position: absolute;
+	bottom: 60px;
+}
+
+.mainMenu ul {
+	height: 60px;
+	width: 100%;
+	background-color: #BF7EAE;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.mainMenu ul li {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding: 0 50px;
+	border-top: 5px solid transparent;
+}
+
+.mainMenu ul li:hover {
+	background-color: #CF87C0;
+	cursor: pointer;
+	color: white;
+	border-color: #ebacda;
+}
+
+.mainMenu ul li::before {
+	content: '';
+	border-radius: 50%;
+	border: 2px solid white;
+	width: 10px;
+	height: 10px;
+	background-color: #BF7EAE;
+	position: absolute;
+	top: -30px;
+}
+
+.mainMenu ul li:hover::before {
+	background-color: #EBACDA;
+}
+
+
+@media (max-width: 600px) {
+
+	*{
+		overflow-y: hidden;
+		overflow-x: hidden;
+	}
+	.mainMenu ul li{
+		padding: 0 25px;
+	}
+
+	.mainMenu ul li::before {
+		display: none;
+	}
+}
