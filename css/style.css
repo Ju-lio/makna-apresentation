@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Permanent+Marker&display=swap');
 
+:root {
+	--FontPink: #FFD0F9;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,9 +11,12 @@
 	vertical-align: baseline;
 	font-size: 100%;
 	font-family: 'Fredoka One', cursive;
-	color: #FFD0F9;
+	color: var(--FontPink);
 
 	list-style: none;
+	text-decoration: none;
+
+	outline: none;
 }
 
 *::selection {
@@ -36,7 +43,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
 
 	background-color: #00000073;
 }
@@ -44,16 +50,116 @@ body {
 .mainOptions h1{
 	font-family: 'Permanent Marker', cursive;
 	font-size: 60pt;
-	color: #FFD0F9;
+	color: var(--FontPink);
 }
 
 .mainOptions h3{
-	font-size: 22pt;
+	font-size: 8pt;
+	margin-top: 25px;
+	padding: 15px;
+	border-bottom: 2px solid var(--FontPink);
 }
 
 .mainOptions h3 span{
-	font-size: 40pt;
+	font-size: 16pt;
 }
+
+.mainOptions .playButton {
+	position: relative;
+	margin: 20px;
+	pointer-events: auto;
+}
+
+.mainOptions .playButton div{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 10px solid var(--FontPink);
+
+	transition-property: border;
+	transition-duration: 0.5s;
+}
+
+.mainOptions .playButton div:hover, .mainOptions .playButton div:hover::before{
+	border-left: 40px solid red;
+}
+
+.mainOptions .playButton div:hover{
+	border: 20px solid red;
+	cursor: pointer;
+}
+
+.mainOptions .playButton div::before {
+	content: '';
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: calc(50% - 25px);
+	right: calc(50% - 25px);
+
+	border-left: 40px solid var(--FontPink);
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+
+	transition-property: border;
+	transition-duration: 0.5s;
+}
+
+.mainOptions h4{
+	font-size: 12pt;
+	padding: 15px 80px;
+	border-bottom: 2px solid var(--FontPink);
+}
+
+.mainOptions .divIcons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.divIcons .icon {
+	margin: 10px;
+	width: 22pt;
+	height: 22pt;
+	font-size: 22pt;
+	font-family: 'Permanent Marker', cursive;
+	fill: var(--FontPink);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition-property: font-size, width;
+	transition-duration: 0.1s;
+}
+
+.divIcons .icon:hover {
+	font-size: 25pt;
+	width: 25pt;
+	height: 25pt;
+
+}
+
+.divIcons .circle {
+	background-color: var(--FontPink);
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}
+
+
+.trimilik, h1 { 
+	animation: treme 0.07s;
+	animation-iteration-count: infinite;
+ }
+ 
+ @keyframes treme {
+	000% {background-position:  center      ;}
+	025% {background-position:  calc(50% + 5px) calc(50% + 3px)        ;}
+	050% {background-position:  center      ; }
+	075% {background-position:  calc(50% - 5px) calc(50% - 3px)         ;}
+	100% {background-position:  center      ;}
+ }
+
 
 /* ##### MENU ##### */
 
@@ -64,6 +170,8 @@ body {
 	display: flex;
 	align-items: flex-end;
 	bottom: 0;
+	pointer-events: none;
+
 }
 
 .mainMenu::before {
@@ -82,6 +190,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	pointer-events: auto;
 }
 .mainMenu ul li {
 	display: flex;

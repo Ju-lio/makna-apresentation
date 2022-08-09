@@ -9,10 +9,35 @@
    <title>Makna Corp</title>
 </head>
 
-<body>
+<body id="bodys">
    <div class="mainOptions">
-         <h3> Sonin bleinin <br> <span> CLEVER SINIS </span> </h3>
+         <h3> WRITTEN AND PRODUCED BY <br> <span> JUYO & FDTTO </span> </h3>
          <h1> MAKNA </h1>
+
+         <div class="playButton" onmouseenter="trimilik()" onmouseleave="trimilik(false)">
+            <a target="_blank" href="https://open.spotify.com/album/5VQH0YRtECzM4usHdzZLMn?si=349f29a5d7ee49bd">
+               <div></div>
+            </a>
+         </div>
+
+         <h4> ACOMPANHE NOSSO TRAMPO </h4>
+
+         <div class="divIcons">
+
+            <a class="icon" href="http://www.instagram.com/MaknaFdtto">F</a>
+
+            <div class="circle"></div>
+
+            <a target="_blank" href="https://www.instagram.com/maknacorp" title="Instagram">
+               <svg class="icon" width="256px" height="256px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M160,128a32,32,0,1,1-32-32A32.03667,32.03667,0,0,1,160,128Zm68-44v88a56.06353,56.06353,0,0,1-56,56H84a56.06353,56.06353,0,0,1-56-56V84A56.06353,56.06353,0,0,1,84,28h88A56.06353,56.06353,0,0,1,228,84Zm-52,44a48,48,0,1,0-48,48A48.05436,48.05436,0,0,0,176,128Zm16-52a12,12,0,1,0-12,12A12,12,0,0,0,192,76Z"></path>
+               </svg>
+            </a>
+
+            <div class="circle"></div>
+
+            <a class="icon" href="http://www.instagram.com/MaknaJuyo">J</a>
+         </div>
    </div>
 
    <div class="mainMenu">
@@ -24,5 +49,16 @@
       </ul>
    </div>
 </body>
+
+<script>
+   function trimilik(bActive=true) {
+      if(bActive){
+         document.querySelector("body").classList.add('trimilik');
+      } else {
+         document.querySelector("body").classList.remove('trimilik');
+      }
+   }
+</script>
+
 
 </html>
